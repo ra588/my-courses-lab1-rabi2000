@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="sv" data-ng-app="myCoursesApp"  class="ng-scope" >
+
+<head>
+
+    <title>
+        DT190G - Laboration 0: ({{ rabi2000 }})
+    </title>
+    <meta charset="utf-8" />
+
+ 
+    <link rel="stylesheet" href="my-courses.css" type="text/css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    
+
+    <script src="my-courses.controller.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <h1 class="center ng-binding" data-ng-bind="getPageHeading('my-courses.html')"></h1>
+
+        <p>{{ getPageHeading('my-courses.html') }}</p>
+
+
+    </header>
+
+    <main>
+
+        <section class="courses">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Kurskod</td>
+                        <td class="course-name">Namn</td>
+                        <td></td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+                <tbody> 
+                
+
+                    <tr data-ng-repeat="course in courses | filter:filterQuery | orderBy: 'Kurskod'">
+                        <td>{{ course.courseCode }}</td>
+
+
+                        
+                    
+
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="center">
+
+            <a href="index.html">Alla kurser</a>
+
+
+    </footer>
+</body>
+
+</html>
