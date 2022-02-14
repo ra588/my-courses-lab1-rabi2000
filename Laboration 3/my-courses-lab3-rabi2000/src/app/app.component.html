@@ -1,0 +1,20 @@
+<header>
+    <h1 class="center">{{ pageInfoService.heading }}</h1>
+    <p>{{ pageInfoService.text }}</p>
+  
+    <nav>
+      <a routerLink="/">Alla kurser</a> |
+      <a routerLink="/my-courses">Mina kurser</a>
+    </nav>
+  </header>
+  
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  
+  <footer>
+    <p class="center">
+      Denna sida läser data från
+      <a href="{{ pageInfoService.dataSourceLink }}" target="_blank">{{ pageInfoService.dataSourceName }}</a>.
+    </p>
+  </footer>
